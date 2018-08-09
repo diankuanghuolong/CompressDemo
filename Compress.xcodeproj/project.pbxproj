@@ -15,7 +15,7 @@
 		193EFA1A211BE45200C75DAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 193EFA19211BE45200C75DAA /* main.m */; };
 		193EFA21211BE46200C75DAA /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 193EFA20211BE46200C75DAA /* 1.mp4 */; };
 		193EFA24211BE4DA00C75DAA /* CompressVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 193EFA23211BE4DA00C75DAA /* CompressVideoTool.m */; };
-		193EFA26211BEA3E00C75DAA /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 193EFA25211BEA3E00C75DAA /* 2.mp4 */; };
+		193EFA2A211C0D2800C75DAA /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 193EFA29211C0D2800C75DAA /* 2.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		193EFA20211BE46200C75DAA /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		193EFA22211BE4DA00C75DAA /* CompressVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompressVideoTool.h; sourceTree = "<group>"; };
 		193EFA23211BE4DA00C75DAA /* CompressVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompressVideoTool.m; sourceTree = "<group>"; };
-		193EFA25211BEA3E00C75DAA /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
+		193EFA29211C0D2800C75DAA /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				193EFA22211BE4DA00C75DAA /* CompressVideoTool.h */,
 				193EFA23211BE4DA00C75DAA /* CompressVideoTool.m */,
 				193EFA20211BE46200C75DAA /* 1.mp4 */,
-				193EFA25211BEA3E00C75DAA /* 2.mp4 */,
+				193EFA29211C0D2800C75DAA /* 2.mp4 */,
 				193EFA10211BE45000C75DAA /* Main.storyboard */,
 				193EFA13211BE45200C75DAA /* Assets.xcassets */,
 				193EFA15211BE45200C75DAA /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193EFA26211BEA3E00C75DAA /* 2.mp4 in Resources */,
+				193EFA2A211C0D2800C75DAA /* 2.mp4 in Resources */,
 				193EFA17211BE45200C75DAA /* LaunchScreen.storyboard in Resources */,
 				193EFA21211BE46200C75DAA /* 1.mp4 in Resources */,
 				193EFA14211BE45200C75DAA /* Assets.xcassets in Resources */,
