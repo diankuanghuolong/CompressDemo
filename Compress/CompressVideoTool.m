@@ -19,18 +19,20 @@
 }
 #pragma mark  =====  视频压缩&&上传  =====
 -(void)compressByVideoURL:(NSString *)videoURL{
-//    NSURL *sourceURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"1.mp4" ofType:@""]];
     NSURL *sourceURL; if([videoURL hasSuffix:@".mp4"]){
         sourceURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:videoURL ofType:@""]];
     }else{
         
     }
     NSURL *newVideoUrl ; //一般.mp4
-    NSDateFormatter *formater = [[NSDateFormatter alloc] init];//用时间给文件全名，以免重复，在测试的时候其实可以判断文件是否存在若存在，则删除，重新生成文件即可
-    [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
-    NSString *path = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/output-%@.mp4", [formater stringFromDate:[NSDate date]]];
+//    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+//    [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
+//    NSString *timeStr = [formater stringFromDate:[NSDate date]];
+    NSString *appendStr = @"";
+    NSString *path = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/output-%@.mp4", appendStr];
     NSLog(@"压缩视频文件路径->%@",path);
-    newVideoUrl = [NSURL fileURLWithPath:path];//这个是保存在app自己的沙盒路径里，后面可以选择是否在上传后删除掉。我建议删除掉，免得占空间。
+    [[NSFileManager defaultManager] removeItemAtPath:[newVideoUrl path] error:nil];
+    newVideoUrl = [NSURL fileURLWithPath:path];
     [self convertVideoQuailtyWithInputURL:sourceURL outputURL:newVideoUrl completeHandler:nil];
 }
 - (void) convertVideoQuailtyWithInputURL:(NSURL*)inputURL
@@ -79,7 +81,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     float filesize = -1.0;
     if ([fileManager fileExistsAtPath:path]) {
-        NSDictionary *fileDic = [fileManager attributesOfItemAtPath:path error:nil];//获取文件的属性
+        NSDictionary *fileDic = [fileManager attributesOfItemAtPath:path error:nil];/**获取文件的属性*/
         unsigned long long size = [[fileDic objectForKey:NSFileSize] longLongValue];
         filesize = 1.0*size/1024;
     }else{
